@@ -31,19 +31,6 @@ app.get("/home", (req, res) => {
     res.render("home", { username });
 });
 
-app.get("/forgot-password", (req,res) => {
-    res.render('forgot-password', {
-        pageTitle: 'Forgot Password'
-    });
-});
-
-app.get("/reset-password", (req, res) => {
-    res.render('reset-password',{
-        pageTitle: 'Reset Password',
-        token: req.params.token
-    });
-});
-
 // Handle signup
 app.post("/signup", async (req, res) => {
     const { username, password } = req.body;
